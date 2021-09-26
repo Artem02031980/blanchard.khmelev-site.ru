@@ -1,0 +1,154 @@
+:root{
+    --color-main:#333333;
+    --color-black:#000000;
+    --color-white:#FFFFFF;
+    --color-purple-1:#7943A4;
+    --color-purple-2:#9D5CD0;
+    --color-purple-3:#C283F3;
+    --color-purple-4:#D1A9F0;
+}
+
+/*TAGS*/
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+*:focus{
+    outline: none;
+}
+
+h1,h2,h3,h4,p {
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    line-height: 32px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+ul, menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*visually-hidden*/
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;    
+}
+
+/*container*/
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+
+.header__top .container,
+.header__bottom .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*header__top*/
+
+.header__top {
+    background-color: var(--color-black);
+    padding: 30px 0;
+}
+
+.header__logo {
+    display: block;
+    width: 173px;
+    height: 39.9px;
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 190px;
+}
+
+.header__logo:focus {
+    outline: 3px solid var(--color-purple-1);        
+}
+
+.header__nav {
+    flex-grow: 1;
+}
+
+.header__nav ul{
+    display: flex;
+}
+
+.header__nav li{
+    margin-right: 62px;
+}
+
+.header__nav li:last-child{
+    margin-right: 0;
+}
+
+.header__nav a{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-white);
+    transition: color .2s ease-in-out;
+}
+
+.header__nav a:hover{    
+    color: var(--color-purple-3);
+}
+
+.header__nav a:focus{    
+    color: var(--color-purple-1);
+}
+
+.header__private {
+    font-size: 18px;
+    color: var(--color-white);    
+    background-repeat: no-repeat;
+    background-position: left 60%;
+    background-image: url(../img/icon-private.svg);
+    padding-left: 22px;
+    transition: color,background-image .2s ease-in-out;
+}
+
+.header__private:hover {    
+    color: var(--color-purple-3);
+    background-image: url(../img/icon-private-hover.svg);    
+}
+
+.header__private:focus {    
+    color: var(--color-purple-2);
+    background-image: url(../img/icon-private-focus.svg);    
+}
+
+.header__bottom {    
+    background-color: rgba(0, 0, 0, 0.4);
+}
